@@ -1,0 +1,13 @@
+#!/bin/bash
+
+pkill npl
+rm log.txt
+
+# update package dependencies
+git submodule init && git submodule update
+git submodule foreach git pull origin master
+
+# start webserver in folder and port
+npl -d root="WebServerExample/" port="8099" bootstrapper="script/apps/WebServer/WebServer.lua" 
+
+cat log.txt
