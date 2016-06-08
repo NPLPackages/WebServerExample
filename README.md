@@ -1,15 +1,22 @@
-# Paracraft Wiki Site
+# Example Web Server
 
-To start the server at port 80, run
+## How To Install 
+Install [NPLRuntime](https://github.com/LiXizhi/NPLRuntime/wiki), then
+
 ```
-./start.sh
-```
-Or one can start with
-```
-npl "script/apps/WebServer/WebServer.lua"  port="80" root="paracraftwiki/"
+git clone https://github.com/NPLPackages/WebServerExample.git
 ```
 
-Dependencies: `main` package
+Run `./start.sh` on linux, or `start.bat` on windows, 
+or run with following npl command directly.  
+```
+npl -d root="WebServerExample/" port="8099" bootstrapper="script/apps/WebServer/WebServer.lua"
+```
 
-Web server root directory is `paracraftwiki/` 
+To test it, open `http://localhost:8099`
+
+Dependencies: 
+  - [main package](https://github.com/NPLPackages/main), see git submodules for details
+
+Web server root directory is `WebServerExample/` 
 
