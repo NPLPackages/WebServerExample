@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pkill npl
+pkill -9 npl
 rm log.txt
 
 # update package dependencies
